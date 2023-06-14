@@ -85,6 +85,7 @@ jobs:
   # Deployment job
   deployDev:
     name: Deploy to Developing
+    if: github.event.ref == 'refs/heads/dev'
     environment:
       name: Developing
       url: ${{ steps.deployment.outputs.page_url }}
@@ -98,6 +99,7 @@ jobs:
   
   deployProd: 
     name: Deploy to Production
+    if: github.event.ref == 'refs/heads/main'
     environment:
       name: Production
       url: ${{ steps.deployment.outputs.page_url }}
