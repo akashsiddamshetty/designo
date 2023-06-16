@@ -7,8 +7,8 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <div className="relative flex h-[1005px] w-full  items-end justify-center md:h-[687px] lg:h-[613px]">
-      <div className="absolute top-0 mx-[24px] flex h-[379px] flex-col items-center justify-around rounded-[15px] bg-peach px-[24px] py-[64px] text-center text-white md:mx-[39px] md:h-[350px] md:px-[58px] md:py-[57px] lg:mx-[164px] lg:h-[292px] xl:w-[1111px] lg:flex-row lg:justify-between lg:px-[95px] lg:text-left">
+    <div className="relative flex h-[1005px] w-full items-end  justify-center  md:h-[687px] lg:h-[613px]">
+      <div className="absolute top-0 mx-[24px] flex h-[379px] flex-col items-center justify-around rounded-[15px] bg-peach bg-bg-pattern-intro-web bg-right  bg-no-repeat	 px-[24px] py-[64px] text-center text-white md:mx-[39px] md:h-[350px] md:px-[58px] md:py-[57px] lg:mx-[164px] lg:h-[292px] lg:flex-row lg:justify-between lg:px-[95px] lg:text-left xl:w-[1111px]">
         <div className="lg:flex lg:w-[459px] lg:flex-col lg:justify-between lg:py-[72px]">
           <h2 className="md:px-[150px] lg:px-0 ">
             Let’s talk about your project
