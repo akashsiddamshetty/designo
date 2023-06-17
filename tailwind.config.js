@@ -14,6 +14,7 @@ module.exports = {
         "conic-gradient":
           "conic-gradient(from 90deg at 50% 50%, rgba(231, 129, 107, 0.0001) 0deg, #E7816B 359.74deg, rgba(231, 129, 107, 0.0001) 360deg)",
         "bg-pattern-intro-web": "url('/web-design/bg-pattern-intro-web.svg')",
+        "home-banner-bg": "url('/home/desktop/bg-pattern-hero-home.svg')",
       },
       colors: {
         peach: "#E7816B",

@@ -6,7 +6,7 @@ interface HeaderProps {}
 
 const Header: FC<HeaderProps> = ({}) => {
   return (
-    <div className="mb-[500px] flex items-center justify-between px-[24px] py-[35px] md:px-[39px] md:py-[64px] lg:px-[164px]">
+    <div className="flex items-center justify-between px-[24px] py-[35px] md:px-[39px] md:py-[64px] lg:px-[164px]">
       <Logo />
       <div className="hidden gap-[42px] text-black md:flex ">
         <Link href="/our-company">Our company</Link>
