@@ -20,7 +20,7 @@ const Banner: FC<BannerProps> = ({}) => {
       <div className="">
         <img
           className="scale-x-[2] scale-y-[1.8]"
-          src="/home/image-hero-phone.png"
+          src="/home/desktop/image-hero-phone.png"
           alt="iphone"
         />
       </div>
