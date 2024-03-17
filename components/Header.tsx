@@ -1,19 +1,51 @@
-import React, { FC } from "react";
+"use client";
+import React, { FC, useEffect, useState } from "react";
 import Logo from "./Logo";
-import Link from "next/link";
+import { HeaderDropdownProvider } from "@/app/context/HeaderDropdownProvider";
+import HamburgerMenu from "./HamburgerMenu";
+import HeaderDropDown from "./HeaderDropdown";
+import NavLinks from "./NavLinks";
+import { cn } from "@/app/utils/utils";
 
 interface HeaderProps {}
 
 const Header: FC<HeaderProps> = ({}) => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+
+      if (offset > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="flex items-center justify-between px-[24px] py-[35px] md:px-[39px] md:py-[64px] lg:px-[164px]">
+    <header
+      className={cn(
+        " z-50 flex w-full items-center justify-between bg-white px-[24px] py-[35px] md:px-[39px] md:py-[64px] lg:px-[164px]",
+        {
+          ["fixed"]: isSticky,
+        }
+      )}
+    >
       <Logo />
-      <div className="hidden gap-[42px] text-black md:flex ">
-        <Link href="/our-company">Our company</Link>
-        <Link href="/locations">Locations </Link>
-        <Link href="/contact">Contact</Link>
-      </div>
-    </div>
+      <HeaderDropdownProvider>
+        <HamburgerMenu />
+        <NavLinks className="hidden gap-[42px] text-black md:flex " />
+        <HeaderDropDown />
+      </HeaderDropdownProvider>
+    </header>
   );
 };
 
