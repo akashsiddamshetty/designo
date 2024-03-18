@@ -3,7 +3,7 @@ name: Deploy Next.js site to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main","dev"]
+    branches: ["main", "dev"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -47,7 +47,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -104,4 +104,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2  
+        uses: actions/deploy-pages@v2
