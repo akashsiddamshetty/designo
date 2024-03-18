@@ -97,13 +97,13 @@ interface HomeInfoProps {}
 const HomeInfo: FC<HomeInfoProps> = ({}) => {
   return (
     <section className="px-6 py-[120px] sm:px-10 lg:px-[164px]">
-      <div className=" flex flex-col items-center justify-center gap-6 lg:h-[640px] lg:w-full lg:gap-x-14  lg:flex-col lg:flex-wrap lg:items-center lg:justify-start ">
+      <div className=" flex flex-col items-center justify-center gap-6 lg:h-[640px] lg:w-full lg:flex-col  lg:flex-wrap lg:items-center lg:justify-start lg:gap-x-14 ">
         {infocardData.map((info, i) => {
           const { title, link, bg } = info;
           return <InfoCard key={i} title={title} link={link} bg={bg} />;
         })}
       </div>
-      <div className="flex w-full flex-col items-center justify-center gap-20 py-[150px] sm:gap-8 sm:py-[120px] lg:flex-row lg:gap-[30px] ">
+      <div className="flex w-full flex-col items-center justify-center gap-20 py-[150px] sm:gap-8 sm:pt-[120px] lg:flex-row lg:gap-[30px] ">
         {infoData.map((data, i) => {
           const { image, title, content } = data;
           return (
@@ -112,7 +112,7 @@ const HomeInfo: FC<HomeInfoProps> = ({}) => {
               className="relative flex w-full flex-col items-center justify-center gap-12 sm:flex-row lg:flex-col"
             >
               <div className="relative  h-[202px] w-[202px]  overflow-hidden">
-                <div className="absolute inset-0 h-full w-full rounded-full bg-background-img-here bg-no-repeat bg-cover "></div>
+                <div className="absolute inset-0 h-full w-full rounded-full bg-background-img-here bg-cover bg-no-repeat "></div>
                 <div className="absolute inset-0">
                   <Image
                     src={image}
