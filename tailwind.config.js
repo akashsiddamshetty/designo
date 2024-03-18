@@ -37,6 +37,8 @@ module.exports = {
           "url('https://raw.githubusercontent.com/akashsiddamshetty/designo/main/public/home/desktop/image-app-design.jpg')",
         "desktop-image-graphic-design":
           "url('https://raw.githubusercontent.com/akashsiddamshetty/designo/main/public/home/desktop/image-graphic-design.jpg')",
+        "background-img-here":
+          "url('https://raw.githubusercontent.com/akashsiddamshetty/designo/aa70098872fbc920ef3dbb2fe2a4cdffbb7f0926/public/home/desktop/bg-pattern-hero-home.svg')",
       },
       colors: {
         peach: "#E7816B",

@@ -1,12 +1,12 @@
-import React, { FC, ReactNode } from "react";
+import React, { ButtonHTMLAttributes, FC, ReactNode } from "react";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
 const Button: FC<ButtonProps> = ({ children }) => {
   return (
-    <button className="text-black rounded-[8px] tracking-[1px] px-[19px] py-[17px] uppercase bg-white">
+    <button className="text-black rounded-[8px] hover:bg-light_peach tracking-[1px] px-[19px] py-[17px] uppercase bg-white">
       {children}
     </button>
   );

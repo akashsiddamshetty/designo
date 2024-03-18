@@ -112,8 +112,8 @@ const HomeInfo: FC<HomeInfoProps> = ({}) => {
               className="relative flex w-full flex-col items-center justify-center gap-12 sm:flex-row lg:flex-col"
             >
               <div className="relative  h-[202px] w-[202px]  overflow-hidden">
-                <div className="absolute  h-full w-full rounded-full bg-gradient-to-b from-transparent to-[#F1F3F5] "></div>
-                <div className="absolute">
+                <div className="absolute inset-0 h-full w-full rounded-full bg-background-img-here bg-no-repeat bg-cover "></div>
+                <div className="absolute inset-0">
                   <Image
                     src={image}
                     alt="title"
