@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { FC } from "react";
 import Button from "./ui/Button";
-import Image from "next/image";
 
 interface BannerProps {}
 
@@ -20,8 +19,12 @@ const Banner: FC<BannerProps> = ({}) => {
       <div className="relative flex h-full w-full flex-1 items-center justify-end overflow-hidden ">
         <div className="h-full w-full ">
           <img
-            className="absolute top-20 left-20 scale-125 opacity-75 "
-            src="/home/desktop/image-hero-phone.png"
+            className="absolute left-20 top-20 scale-125 opacity-75 "
+            src={
+              process.env.NEXT_PUBLIC_ENV
+                ? "/designo/home/desktop/image-hero-phone.png"
+                : "/home/desktop/image-hero-phone.png"
+            }
             alt="hero image iphone  "
           />
         </div>
