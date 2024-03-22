@@ -1,11 +1,18 @@
-import { FC, ReactNode, createContext, useContext, useState } from "react";
+import {
+  FC,
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 interface HeaderdropdownContext {
   children: ReactNode;
 }
 interface HeaderdropdownContextType {
   isOpen: boolean;
-  toggleDropdown: ()=>void;
+  toggleDropdown: () => void;
 }
 
 const HeaderdropdownContext = createContext<
@@ -25,6 +32,9 @@ export const HeaderDropdownProvider: FC<HeaderdropdownContext> = ({
       document.body.classList.remove("overflow-hidden");
     }
   };
+  useEffect(() => {
+    document.body.classList.remove("overflow-hidden");
+  }, []);
 
   return (
     <HeaderdropdownContext.Provider value={{ isOpen, toggleDropdown }}>

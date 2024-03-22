@@ -1,17 +1,21 @@
+"use client";
 import React, { FC } from "react";
 import Button from "./ui/Button";
 import Logo from "./Logo";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
+  const router = useRouter();
+
   return (
     <footer className="relative h-[1005px] w-full  md:h-[687px] lg:h-[613px]">
       <section className="absolute z-10 h-[379px] w-full overflow-hidden rounded-lg px-6 sm:h-[350px] sm:px-10 lg:h-[292px] lg:px-[164px]">
-        <div className=" inset-0 inline-flex  w-full h-full flex-col items-center justify-center gap-8 rounded-lg bg-peach bg-bg-pattern-intro-web bg-right bg-no-repeat text-center lg:text-start lg:flex-row lg:items-center lg:justify-between px-[95px]   ">
-          <div className="px-6 text-white  w-1/2  ">
-            <h2 className="text-[32px] lg:mb-4 leading-9 sm:text-[40px]  sm:leading-10 md:px-[150px] lg:px-0 ">
+        <div className=" inset-0 inline-flex  h-full w-full flex-col items-center justify-center gap-8 rounded-lg bg-peach bg-bg-pattern-intro-web bg-right bg-no-repeat text-center lg:flex-row lg:items-center lg:justify-between lg:px-[95px] lg:text-start   ">
+          <div className="px-6 text-white  lg:w-1/2  ">
+            <h2 className="text-[32px] leading-9 sm:text-[40px] sm:leading-10  md:px-[150px] lg:mb-4 lg:px-0 ">
               Let’s talk about your project
             </h2>
             <p className="text-base sm:leading-[26px] md:px-[70px] lg:px-0">
@@ -19,7 +23,13 @@ const Footer: FC<FooterProps> = ({}) => {
               how our expertise can help your business grow.
             </p>
           </div>
-          <Button className="flex-1">Get in touch </Button>
+          <Button
+            onClick={() => {
+              router.push("/contact");
+            }}
+          >
+            Get in touch
+          </Button>
         </div>
       </section>
       <section className=" absolute bottom-0 flex h-[815px] w-full items-center  bg-black text-center text-white md:h-[423px] lg:h-[393px]">
