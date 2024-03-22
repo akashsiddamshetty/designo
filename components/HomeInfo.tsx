@@ -114,7 +114,7 @@ const HomeInfo: FC<HomeInfoProps> = ({}) => {
                   <Image
                     src={
                       process.env.NEXT_PUBLI_ENV === "production"
-                        ? `/designo+${image}`
+                        ? `/designo${image}`
                         : image
                     }
                     alt="title"
