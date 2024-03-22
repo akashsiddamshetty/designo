@@ -17,7 +17,7 @@ const Card: FC<CardProps> = ({ image, title, content }) => {
           alt={title}
         />
       </div>
-      <div className="flex h-auto flex-1 flex-col items-center justify-center gap-4 bg-[#FDF3F0] px-7 py-8 text-center group-hover:bg-peach group-hover:text-white ">
+      <div className="flex h-auto flex-1 flex-col items-center justify-center gap-4 bg-very_light_peach px-7 py-8 text-center group-hover:bg-peach group-hover:text-white ">
         <h1 className="text-xl text-peach group-hover:text-white">{title}</h1>
         <p className="text-base">{content}</p>
       </div>

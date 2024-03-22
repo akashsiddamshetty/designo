@@ -52,6 +52,15 @@ module.exports = {
         "background-img-here": process.env.NEXT_PUBLIC_ENV
           ? "url('/designo/home/desktop/bg-pattern-hero-home.svg')"
           : "url('/home/desktop/bg-pattern-hero-home.svg')",
+        "desktop-about-hero-img": process.env.NEXT_PUBLIC_ENV
+          ? "url('/designo/about/desktop/image-about-hero.jpg')"
+          : "url('/about/desktop/image-about-hero.jpg')",
+        "tablet-about-hero-img": process.env.NEXT_PUBLIC_ENV
+          ? "url('/designo/about/tablet/image-about-hero.jpg')"
+          : "url('/about/tablet/image-about-hero.jpg')",
+        "mobile-about-hero-img": process.env.NEXT_PUBLIC_ENV
+          ? "url('/designo/about/mobile/image-about-hero.jpg')"
+          : "url('/about/mobile/image-about-hero.jpg')",
       },
       colors: {
         peach: "#E7816B",
@@ -60,6 +69,7 @@ module.exports = {
         light_peach: "#FFAD9B",
         dark_grey: "#333136",
         light_grey: "#DFDFDF",
+        very_light_peach: "#FDF3F0",
       },
     },
   },

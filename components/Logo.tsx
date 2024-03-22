@@ -8,7 +8,7 @@ const Logo: FC<LogoProps> = ({}) => {
     <div className="flex items-center gap-[16px]">
       <div className=" matrix h-[24px] w-[24px] rounded-full bg-conic-gradient "></div>
       <Link
-        href="/"
+        href={process.env.NEXT_PUBLIC_ENV ? "/designo" : "/"}
         className="text-[24px] font-[700] leading-[27px] tracking-[5px]"
       >
         DESIGNO
