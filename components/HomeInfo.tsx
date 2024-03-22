@@ -112,7 +112,11 @@ const HomeInfo: FC<HomeInfoProps> = ({}) => {
                 <div className="absolute inset-0 h-full w-full rounded-full bg-background-img-here bg-cover bg-no-repeat "></div>
                 <div className="absolute inset-0">
                   <Image
-                    src={image}
+                    src={
+                      process.env.NEXT_PUBLI_ENV === "production"
+                        ? `/designo+${image}`
+                        : image
+                    }
                     alt="title"
                     height={202}
                     width={202}

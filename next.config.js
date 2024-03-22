@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/designo',
+  basePath: process.env.NEXT_PUBLI_ENV === "production" ? "/designo" : "",
   output: "export",
 };
 
