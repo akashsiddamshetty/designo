@@ -113,7 +113,7 @@ const HomeInfo: FC<HomeInfoProps> = ({}) => {
                 <div className="absolute inset-0">
                   <Image
                     src={
-                      process.env.NEXT_PUBLI_ENV === "production"
+                      process.env.NEXT_PUBLIC_ENV === "production"
                         ? `/designo${image}`
                         : image
                     }
